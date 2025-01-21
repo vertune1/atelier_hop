@@ -1,3 +1,4 @@
+/* Grundlegende Reset-Einstellungen */
 * {
     margin: 0;
     padding: 0;
@@ -5,27 +6,33 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
 }
 
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Header */
 header {
-    background-color: #333;
-    color: white;
-    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 20px;
 }
 
 header .logo img {
-    height: 50px;
+    height: 40px;
 }
 
 header nav ul {
-    list-style: none;
     display: flex;
+    list-style: none;
 }
 
 header nav ul li {
@@ -36,55 +43,160 @@ header nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    text-transform: uppercase;
 }
 
+header nav ul li a:hover {
+    color: #009688;
+}
+
+/* Hero Section */
 .hero {
-    background-color: #009688;
+    background-image: url('hero-image.jpg'); /* Bild ersetzen */
+    background-size: cover;
+    background-position: center;
     color: white;
-    padding: 50px;
+    padding: 100px 20px;
     text-align: center;
-}
-
-section {
-    padding: 20px;
-    margin: 10px;
-}
-
-h2 {
-    font-size: 1.5em;
-    margin-bottom: 20px;
-}
-
-ul {
-    list-style: none;
-}
-
-form {
+    height: 60vh;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
 }
 
-form input,
-form button {
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+.hero .btn-primary {
+    margin-top: 20px;
+    padding: 10px 30px;
+    background-color: #009688;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+.hero .btn-primary:hover {
+    background-color: #00796b;
+}
+
+/* About Section */
+.about {
+    background-color: #fff;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Services Section */
+.services {
+    background-color: #f4f4f4;
+    padding: 80px 20px;
+}
+
+.services h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.service-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 30%;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.service-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+
+/* Contact Section */
+.contact {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact input, .contact textarea {
+    width: 100%;
     padding: 10px;
-    margin: 10px 0;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
     font-size: 1rem;
 }
 
-button {
-    background-color: #333;
+.contact button {
+    padding: 10px 20px;
+    background-color: #009688;
     color: white;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
+    font-size: 1rem;
 }
 
-button:hover {
-    background-color: #555;
+.contact button:hover {
+    background-color: #00796b;
 }
 
+/* Footer */
 footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 20px;
-    margin-top: 20px;
+    margin-top: 40px;
 }
